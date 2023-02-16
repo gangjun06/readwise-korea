@@ -1,0 +1,18 @@
+{
+  "name": "Readwise Korea",
+  "description": "한국 서점들의 독서노트를 Readwise로 가져올 수 있도록 도와주는 확장 프로그램입니다.",
+  "version": "1.0",
+  "manifest_version": 3,
+  "icons": {
+    "16": "src/assets/icons/get_started16.png",
+    "32": "src/assets/icons/get_started32.png",
+    "48": "src/assets/icons/get_started48.png",
+    "128": "src/assets/icons/get_started128.png"
+  },
+  "permissions": ["storage", "tabs", "cookies", "activeTab"],
+  "host_permissions": ["https://*.ridibooks.com/*", "https://readwise.io/*"],
+  "background": {
+    "service_worker": "src/background/index.ts"
+  },
+  "action": {}
+}

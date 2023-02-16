@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body,
+html,
+#app {
+  @apply h-full text-base;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.hide-scroll {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.hide-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide arrow from input[type="number"] */
+.no-spin::-webkit-inner-spin-button,
+.no-spin::-webkit-outer-spin-button {
+  -webkit-appearance: none !important;
+  margin: 0 !important;
+}
+
+.no-spin {
+  appearance: textfield !important;
+  -moz-appearance: textfield !important;
+}
+
+:root[data-theme="light"] {
+  --color-background: theme("colors.slate.50");
+  --color-background-secondary: theme("colors.slate.100");
+
+  --color-background-card: theme("colors.white");
+  --color-background-card-header: theme("colors.slate.50");
+
+  --color-text: theme("colors.gray.700");
+  --color-text-title: theme("colors.gray.900");
+  --color-text-description: theme("colors.gray.600");
+  /* --color-primary: theme("colors.blue.500");
+  --color-secondary: theme("colors.green.500");
+  --color-background: theme("colors.gray.50");
+  --color-background: 249 250 251;
+  --color-background-offset: theme("colors.gray.100"); */
+  --color-border: theme("colors.gray.900" / 10%);
+}
+
+:root[data-theme="dark"] {
+  --color-background: theme(colors.gray.800);
+  --color-background-secondary: theme("colors.gray.900");
+
+  --color-background-card: theme(colors.gray.700);
+  --color-background-card-header: theme("colors.gray.800");
+
+  --color-text: theme("colors.gray.300");
+  --color-text-title: theme("colors.gray.50");
+  --color-text-description: theme("colors.gray.400");
+  /* --color-primary: theme("colors.blue.400");
+  --color-secondary: theme("colors.green.400");
+  --color-text: theme("colors.gray.50");
+  --color-text-offset: theme("colors.gray.400");
+  --color-background: theme("colors.gray.900");
+  --color-background: 17 24 39;
+  --color-background-offset: theme("colors.gray.800"); */
+  --color-border: theme("colors.gray.50" / 10%);
+}
